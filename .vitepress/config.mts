@@ -24,7 +24,7 @@ export default defineConfig({
     root: {
       label: "简体中文",
       lang: "zh-CN",
-      title: "SITE_TITLE",
+      title: "MiniKvStore",
       description: "SITE_DESCRIPTION",
       themeConfig: {
         logo: "/favicon.svg",
@@ -89,7 +89,7 @@ export default defineConfig({
     en: {
       label: "English",
       lang: "en",
-      title: "SITE_TITLE",
+      title: "MiniKvStore",
       description: "SITE_DESCRIPTION",
       themeConfig: {
         logo: "/favicon.svg",

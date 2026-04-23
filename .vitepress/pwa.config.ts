@@ -5,7 +5,7 @@ export const pwaConfig: Partial<VitePWAOptions> = {
   includeAssets: ['favicon.svg'],
   manifest: {
     name: 'KvStore',
-    short_name: 'SITE_TITLE',
+    short_name: 'MiniKvStore',
     description: 'A production-ready, segmented key-value storage engine written in Go',
     theme_color: '#3eaf7c',
     background_color: '#ffffff',
