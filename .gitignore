@@ -1,0 +1,30 @@
+node_modules
+bower_components
+coverage
+npm-debug.log
+yarn.lock
+package-lock.json
+.DS_Store
+
+
+# vscode
+.vscode
+.history
+.idea
+
+# python cache
+__pycache__
+
+# vitepress cache
+dist
+**/.vitepress/cache/
+**/.vitepress/temp/
+
+# Environment variables
+.env.local
+.env.*.local
+
+# Claude
+.claude/*.local.json
+
+.gfl.config.local.yml

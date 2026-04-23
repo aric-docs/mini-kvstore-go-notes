@@ -1,0 +1,73 @@
+name: Deploy VitePress Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build VitePress site
+        run: pnpm build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+
+      - name: Output deployment URL
+        run: |
+          REPO_NAME=${{ github.repository }}
+          PAGE_URL="https://${{ github.repository_owner }}.github.io/${REPO_NAME#*/}/"
+          echo "🚀 Deployed to: $PAGE_URL"
+          echo "$PAGE_URL"
+          echo "site_url=$PAGE_URL" >> $GITHUB_OUTPUT
+
+      - name: Add to summary
+        run: |
+          REPO_NAME=${{ github.repository }}
+          PAGE_URL="https://${{ github.repository_owner }}.github.io/${REPO_NAME#*/}/"
+          echo "### 🎉 Deployed to: $PAGE_URL" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Access URL: [$PAGE_URL]($PAGE_URL)" >> $GITHUB_STEP_SUMMARY 

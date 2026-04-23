@@ -1,0 +1,21 @@
+{
+  "name": "@jswork/vitepress-docs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A production-ready, segmented key-value storage engine written in Go",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "preview": "vitepress preview --port 4173 dist"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.1",
+    "vite-plugin-pwa": "^1.2.0",
+    "vitepress": "^1.6.4",
+    "vitepress-sidebar": "^1.33.1",
+    "vue": "^3.5.27",
+    "workbox-window": "^7.4.0"
+  }
+}
