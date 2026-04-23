@@ -1,6 +1,6 @@
 # Mini KV Store 文档
 
-[mini-kvstore-go](https://github.com/whispem/mini-kvstore-go) 的文档站点，基于 VitePress 构建，支持中英双语。
+[mini-kvstore-go](https://github.com/aric-go/mini-kvstore-go) 的文档站点，基于 VitePress 构建，支持中英双语。
 
 ## 开发
 

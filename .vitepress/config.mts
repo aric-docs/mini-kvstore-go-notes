@@ -78,7 +78,7 @@ export default defineConfig({
           },
         },
         socialLinks: [
-          { icon: "github", link: "https://github.com/whispem/mini-kvstore-go" },
+          { icon: "github", link: "https://github.com/aric-go/mini-kvstore-go" },
         ],
         footer: {
           message: "基于 MIT 许可发布",
@@ -143,7 +143,7 @@ export default defineConfig({
           },
         },
         socialLinks: [
-          { icon: "github", link: "https://github.com/whispem/mini-kvstore-go" },
+          { icon: "github", link: "https://github.com/aric-go/mini-kvstore-go" },
         ],
         footer: {
           message: "Released under the MIT License.",

@@ -9,7 +9,7 @@
 ## Installation
 
 ```bash
-git clone https://github.com/whispem/mini-kvstore-go
+git clone https://github.com/aric-go/mini-kvstore-go
 cd mini-kvstore-go
 go mod download
 make build
