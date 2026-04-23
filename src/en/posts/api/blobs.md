@@ -11,7 +11,7 @@ POST /namespaces/{ns}/blobs/{key}
 ```
 
 ```bash
-curl -X POST http://localhost:9002/namespaces/my-app/blobs/avatar.png \
+curl -X POST {baseURL}/namespaces/my-app/blobs/avatar.png \
   -H "Authorization: Bearer ns_xxx" \
   --data-binary @avatar.png
 ```

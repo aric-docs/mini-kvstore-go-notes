@@ -16,7 +16,7 @@
 ## 创建 JSON 文档
 
 ```bash
-curl -X POST http://localhost:9002/namespaces/my-app/json/config \
+curl -X POST {baseURL}/namespaces/my-app/json/config \
   -H "Authorization: Bearer ns_xxx" \
   -H "Content-Type: application/json" \
   -d '{"name":"myapp","version":1,"db":{"host":"localhost","port":5432}}'
@@ -39,7 +39,7 @@ curl -X POST http://localhost:9002/namespaces/my-app/json/config \
 ## 获取整个文档
 
 ```bash
-curl "http://localhost:9002/namespaces/my-app/json/config" \
+curl "{baseURL}/namespaces/my-app/json/config" \
   -H "Authorization: Bearer ns_xxx"
 ```
 
@@ -62,7 +62,7 @@ curl "http://localhost:9002/namespaces/my-app/json/config" \
 ## 获取嵌套字段
 
 ```bash
-curl "http://localhost:9002/namespaces/my-app/json/config?path=db.host" \
+curl "{baseURL}/namespaces/my-app/json/config?path=db.host" \
   -H "Authorization: Bearer ns_xxx"
 ```
 
@@ -78,7 +78,7 @@ curl "http://localhost:9002/namespaces/my-app/json/config?path=db.host" \
 ## 设置嵌套字段
 
 ```bash
-curl -X POST "http://localhost:9002/namespaces/my-app/json/config?path=db.host" \
+curl -X POST "{baseURL}/namespaces/my-app/json/config?path=db.host" \
   -H "Authorization: Bearer ns_xxx" \
   -d '"127.0.0.1"'
 ```
@@ -86,7 +86,7 @@ curl -X POST "http://localhost:9002/namespaces/my-app/json/config?path=db.host" 
 ## 设置新路径（自动创建父对象）
 
 ```bash
-curl -X POST "http://localhost:9002/namespaces/my-app/json/config?path=cache.ttl" \
+curl -X POST "{baseURL}/namespaces/my-app/json/config?path=cache.ttl" \
   -H "Authorization: Bearer ns_xxx" \
   -d '3600'
 ```
@@ -96,7 +96,7 @@ curl -X POST "http://localhost:9002/namespaces/my-app/json/config?path=cache.ttl
 ## 删除路径
 
 ```bash
-curl -X DELETE "http://localhost:9002/namespaces/my-app/json/config?path=version" \
+curl -X DELETE "{baseURL}/namespaces/my-app/json/config?path=version" \
   -H "Authorization: Bearer ns_xxx"
 ```
 
@@ -105,7 +105,7 @@ curl -X DELETE "http://localhost:9002/namespaces/my-app/json/config?path=version
 ## 删除整个文档
 
 ```bash
-curl -X DELETE "http://localhost:9002/namespaces/my-app/json/config" \
+curl -X DELETE "{baseURL}/namespaces/my-app/json/config" \
   -H "Authorization: Bearer ns_xxx"
 ```
 

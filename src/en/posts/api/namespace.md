@@ -11,7 +11,7 @@ POST /namespaces
 ```
 
 ```bash
-curl -X POST http://localhost:9002/namespaces \
+curl -X POST {baseURL}/namespaces \
   -H "Authorization: Bearer mysecret" \
   -H "Content-Type: application/json" \
   -d '{"name":"my-app"}'

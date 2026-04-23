@@ -33,22 +33,22 @@ AUTH_TOKEN=mysecret go run ./cmd/volume-server
 
 ```bash
 # 健康检查
-curl http://localhost:9002/health
+curl {baseURL}/health
 
 # 创建命名空间（需要全局 Token）
-curl -X POST http://localhost:9002/namespaces \
+curl -X POST {baseURL}/namespaces \
   -H "Authorization: Bearer mysecret" \
   -H "Content-Type: application/json" \
   -d '{"name":"my-app"}'
 # 返回: {"data":{"name":"my-app","token":"ns_a1b2c3d4e5f6g7h8","created_at":"..."},"status":201}
 
 # 存储 KV 值（使用命名空间 Token）
-curl -X POST http://localhost:9002/namespaces/my-app/kv/name \
+curl -X POST {baseURL}/namespaces/my-app/kv/name \
   -H "Authorization: Bearer ns_a1b2c3d4e5f6g7h8" \
   -d "Alice"
 
 # 读取 KV 值
-curl http://localhost:9002/namespaces/my-app/kv/name \
+curl {baseURL}/namespaces/my-app/kv/name \
   -H "Authorization: Bearer ns_a1b2c3d4e5f6g7h8"
 # 返回: {"data":"Alice","status":200}
 ```

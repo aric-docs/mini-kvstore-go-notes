@@ -7,7 +7,7 @@ GET /health
 ```
 
 ```bash
-curl http://localhost:9002/health
+curl {baseURL}/health
 ```
 
 响应 `200`:
@@ -33,7 +33,7 @@ GET /metrics
 ```
 
 ```bash
-curl http://localhost:9002/metrics \
+curl {baseURL}/metrics \
   -H "Authorization: Bearer mysecret"
 ```
 
@@ -63,7 +63,7 @@ GET /namespaces/{ns}/stats
 ```
 
 ```bash
-curl http://localhost:9002/namespaces/my-app/stats \
+curl {baseURL}/namespaces/my-app/stats \
   -H "Authorization: Bearer ns_xxx"
 ```
 

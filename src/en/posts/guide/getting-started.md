@@ -33,22 +33,22 @@ AUTH_TOKEN=mysecret go run ./cmd/volume-server
 
 ```bash
 # Health check
-curl http://localhost:9002/health
+curl {baseURL}/health
 
 # Create namespace (requires global token)
-curl -X POST http://localhost:9002/namespaces \
+curl -X POST {baseURL}/namespaces \
   -H "Authorization: Bearer mysecret" \
   -H "Content-Type: application/json" \
   -d '{"name":"my-app"}'
 # Response: {"data":{"name":"my-app","token":"ns_a1b2c3d4e5f6g7h8","created_at":"..."},"status":201}
 
 # Store a KV value (use namespace token)
-curl -X POST http://localhost:9002/namespaces/my-app/kv/name \
+curl -X POST {baseURL}/namespaces/my-app/kv/name \
   -H "Authorization: Bearer ns_a1b2c3d4e5f6g7h8" \
   -d "Alice"
 
 # Get a KV value
-curl http://localhost:9002/namespaces/my-app/kv/name \
+curl {baseURL}/namespaces/my-app/kv/name \
   -H "Authorization: Bearer ns_a1b2c3d4e5f6g7h8"
 # Response: {"data":"Alice","status":200}
 ```

@@ -11,7 +11,7 @@ POST /namespaces/{ns}/kv/{key}
 ```
 
 ```bash
-curl -X POST http://localhost:9002/namespaces/my-app/kv/name \
+curl -X POST {baseURL}/namespaces/my-app/kv/name \
   -H "Authorization: Bearer ns_xxx" \
   -d "Alice"
 ```
@@ -37,7 +37,7 @@ GET /namespaces/{ns}/kv/{key}
 ```
 
 ```bash
-curl http://localhost:9002/namespaces/my-app/kv/name \
+curl {baseURL}/namespaces/my-app/kv/name \
   -H "Authorization: Bearer ns_xxx"
 ```
 
@@ -57,7 +57,7 @@ DELETE /namespaces/{ns}/kv/{key}
 ```
 
 ```bash
-curl -X DELETE http://localhost:9002/namespaces/my-app/kv/name \
+curl -X DELETE {baseURL}/namespaces/my-app/kv/name \
   -H "Authorization: Bearer ns_xxx"
 ```
 
@@ -70,7 +70,7 @@ GET /namespaces/{ns}/kv
 ```
 
 ```bash
-curl http://localhost:9002/namespaces/my-app/kv \
+curl {baseURL}/namespaces/my-app/kv \
   -H "Authorization: Bearer ns_xxx"
 ```
 
