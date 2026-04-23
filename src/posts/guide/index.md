@@ -4,7 +4,8 @@
 
 ## 什么是 Mini KV Store？
 
-Mini KV Store Go 是一个用 Go 编写的高性能、追加写入式键值存储引擎，从 Rust 原版 [mini-kvstore-v2](https://github.com/whispem/mini-kvstore-v2) 移植而来。
+Mini KV Store Go 是一个用 Go 编写的高性能、追加写入式键值存储引擎，从 Rust
+原版 [mini-kvstore-v2](https://github.com/whispem/mini-kvstore-v2) 移植而来。
 
 核心特性：
 

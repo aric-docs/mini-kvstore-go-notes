@@ -42,9 +42,9 @@ GET /namespaces/{ns}/blobs
 
 ## KV vs Blob
 
-| Feature | KV | Blob |
-|---------|-----|------|
-| Storage | Same engine | Same engine |
-| GET response | JSON wrapped | Raw binary |
-| DELETE response | JSON wrapped | 204 No Content |
-| Use for | Strings, config | Files, images, binaries |
+| Feature         | KV              | Blob                    |
+|-----------------|-----------------|-------------------------|
+| Storage         | Same engine     | Same engine             |
+| GET response    | JSON wrapped    | Raw binary              |
+| DELETE response | JSON wrapped    | 204 No Content          |
+| Use for         | Strings, config | Files, images, binaries |

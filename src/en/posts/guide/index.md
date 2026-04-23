@@ -4,7 +4,8 @@ Welcome to the Mini KV Store Go documentation.
 
 ## What is Mini KV Store?
 
-Mini KV Store Go is a high-performance, append-only key-value storage engine written in Go, ported from the original Rust [mini-kvstore-v2](https://github.com/whispem/mini-kvstore-v2).
+Mini KV Store Go is a high-performance, append-only key-value storage engine written in Go, ported from the original
+Rust [mini-kvstore-v2](https://github.com/whispem/mini-kvstore-v2).
 
 Core features:
 

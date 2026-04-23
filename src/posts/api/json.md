@@ -6,12 +6,12 @@
 
 ## 端点总览
 
-| 方法 | 路由 | 查询参数 | 说明 |
-|------|------|----------|------|
-| GET | `/{ns}/json` | — | 列出所有 JSON 文档键 |
-| GET | `/{ns}/json/{key}` | `?path=a.b.c` | 获取整个文档或子路径 |
-| POST | `/{ns}/json/{key}` | `?path=a.b.c` | 创建/替换文档或设置子路径 |
-| DELETE | `/{ns}/json/{key}` | `?path=a.b.c` | 删除整个文档或子路径 |
+| 方法     | 路由                 | 查询参数          | 说明            |
+|--------|--------------------|---------------|---------------|
+| GET    | `/{ns}/json`       | —             | 列出所有 JSON 文档键 |
+| GET    | `/{ns}/json/{key}` | `?path=a.b.c` | 获取整个文档或子路径    |
+| POST   | `/{ns}/json/{key}` | `?path=a.b.c` | 创建/替换文档或设置子路径 |
+| DELETE | `/{ns}/json/{key}` | `?path=a.b.c` | 删除整个文档或子路径    |
 
 ## 创建 JSON 文档
 
@@ -23,8 +23,17 @@ curl -X POST http://localhost:9002/namespaces/my-app/json/config \
 ```
 
 响应 `201`:
+
 ```json
-{"data":{"key":"config","etag":"6a28a913","size":66,"namespace":"my-app"},"status":201}
+{
+  "data": {
+    "key": "config",
+    "etag": "6a28a913",
+    "size": 66,
+    "namespace": "my-app"
+  },
+  "status": 201
+}
 ```
 
 ## 获取整个文档
@@ -35,8 +44,19 @@ curl "http://localhost:9002/namespaces/my-app/json/config" \
 ```
 
 响应 `200`:
+
 ```json
-{"data":{"db":{"host":"localhost","port":5432},"name":"myapp","version":1},"status":200}
+{
+  "data": {
+    "db": {
+      "host": "localhost",
+      "port": 5432
+    },
+    "name": "myapp",
+    "version": 1
+  },
+  "status": 200
+}
 ```
 
 ## 获取嵌套字段
@@ -47,8 +67,12 @@ curl "http://localhost:9002/namespaces/my-app/json/config?path=db.host" \
 ```
 
 响应 `200`:
+
 ```json
-{"data":"localhost","status":200}
+{
+  "data": "localhost",
+  "status": 200
+}
 ```
 
 ## 设置嵌套字段
@@ -87,9 +111,9 @@ curl -X DELETE "http://localhost:9002/namespaces/my-app/json/config" \
 
 ## 错误响应
 
-| 状态码 | 消息 | 场景 |
-|--------|------|------|
-| 404 | json document not found | 文档不存在 |
-| 404 | path not found | 路径不存在（GET/DELETE） |
-| 400 | stored value is not valid JSON | 存储的值不是合法 JSON |
-| 400 | invalid key | 键名无效 |
+| 状态码 | 消息                             | 场景                |
+|-----|--------------------------------|-------------------|
+| 404 | json document not found        | 文档不存在             |
+| 404 | path not found                 | 路径不存在（GET/DELETE） |
+| 400 | stored value is not valid JSON | 存储的值不是合法 JSON     |
+| 400 | invalid key                    | 键名无效              |

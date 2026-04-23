@@ -10,11 +10,11 @@
 
 三层认证模型：
 
-| 层级 | 机制 | 适用端点 |
-|------|------|----------|
-| 无 | — | `GET /`, `GET /health` |
-| 全局 Token | `Authorization: Bearer <AUTH_TOKEN>` | 命名空间 CRUD + `/metrics` |
-| 命名空间 Token | `Authorization: Bearer <ns_token>` | 所有 `/namespaces/{ns}/*` 路由 |
+| 层级         | 机制                                   | 适用端点                       |
+|------------|--------------------------------------|----------------------------|
+| 无          | —                                    | `GET /`, `GET /health`     |
+| 全局 Token   | `Authorization: Bearer <AUTH_TOKEN>` | 命名空间 CRUD + `/metrics`     |
+| 命名空间 Token | `Authorization: Bearer <ns_token>`   | 所有 `/namespaces/{ns}/*` 路由 |
 
 ## CORS
 

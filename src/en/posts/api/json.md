@@ -6,12 +6,12 @@ Requires **namespace token** auth.
 
 ## Endpoints
 
-| Method | Route | Query Param | Description |
-|--------|-------|-------------|-------------|
-| GET | `/{ns}/json` | — | List all JSON document keys |
-| GET | `/{ns}/json/{key}` | `?path=a.b.c` | Get whole doc or sub-value |
-| POST | `/{ns}/json/{key}` | `?path=a.b.c` | Create/replace doc or set sub-value |
-| DELETE | `/{ns}/json/{key}` | `?path=a.b.c` | Delete whole doc or sub-value |
+| Method | Route              | Query Param   | Description                         |
+|--------|--------------------|---------------|-------------------------------------|
+| GET    | `/{ns}/json`       | —             | List all JSON document keys         |
+| GET    | `/{ns}/json/{key}` | `?path=a.b.c` | Get whole doc or sub-value          |
+| POST   | `/{ns}/json/{key}` | `?path=a.b.c` | Create/replace doc or set sub-value |
+| DELETE | `/{ns}/json/{key}` | `?path=a.b.c` | Delete whole doc or sub-value       |
 
 ## Examples
 
@@ -45,8 +45,8 @@ curl -X DELETE ".../json/config"
 
 ## Errors
 
-| Status | Message | When |
-|--------|---------|------|
-| 404 | json document not found | Document doesn't exist |
-| 404 | path not found | Path doesn't exist (GET/DELETE) |
-| 400 | stored value is not valid JSON | Stored data isn't JSON |
+| Status | Message                        | When                            |
+|--------|--------------------------------|---------------------------------|
+| 404    | json document not found        | Document doesn't exist          |
+| 404    | path not found                 | Path doesn't exist (GET/DELETE) |
+| 400    | stored value is not valid JSON | Stored data isn't JSON          |

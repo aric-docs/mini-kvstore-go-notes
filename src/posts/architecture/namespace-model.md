@@ -4,11 +4,11 @@
 
 ## 键前缀方案
 
-| 类型 | 内部键格式 | 示例 |
-|------|-----------|------|
-| 命名空间元数据 | `_meta:ns:{name}` | `_meta:ns:my-app` |
-| KV/Blob 数据 | `ns:{ns}:{key}` | `ns:my-app:name` |
-| JSON 文档 | `ns:{ns}:json:{key}` | `ns:my-app:json:config` |
+| 类型         | 内部键格式                | 示例                      |
+|------------|----------------------|-------------------------|
+| 命名空间元数据    | `_meta:ns:{name}`    | `_meta:ns:my-app`       |
+| KV/Blob 数据 | `ns:{ns}:{key}`      | `ns:my-app:name`        |
+| JSON 文档    | `ns:{ns}:json:{key}` | `ns:my-app:json:config` |
 
 ## 命名空间结构
 

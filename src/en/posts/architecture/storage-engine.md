@@ -42,6 +42,7 @@ Write `Op=Delete` record, remove from in-memory HashMap and index. Old data clea
 ## Snapshots
 
 Binary file `index.snapshot` for fast restart:
+
 ```
 Magic(8B) + EntryCount(4B) + [KeyLen(4B) + Key + SegmentID(8B) + Offset(8B)]...
 ```

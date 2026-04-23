@@ -4,15 +4,15 @@
 
 ## 环境变量
 
-| 变量名 | 类型 | 默认值 | 说明 |
-|--------|------|--------|------|
-| `PORT` | int | `9002` | HTTP 监听端口 |
-| `VOLUME_ID` | string | `vol-1` | 卷标识符 |
-| `DATA_DIR` | string | `data` | 数据存储目录 |
-| `COMPACTION_THRESHOLD` | int | `5` | 触发压缩的最小段数 |
-| `COMPACTION_INTERVAL_SECS` | int | `60` | 压缩检查间隔（秒） |
-| `AUTH_TOKEN` | string | `""` | 全局认证 Token，空值禁用认证 |
-| `MAX_REQUEST_SIZE_MB` | int | `100` | 请求体最大大小 |
+| 变量名                        | 类型     | 默认值     | 说明                |
+|----------------------------|--------|---------|-------------------|
+| `PORT`                     | int    | `9002`  | HTTP 监听端口         |
+| `VOLUME_ID`                | string | `vol-1` | 卷标识符              |
+| `DATA_DIR`                 | string | `data`  | 数据存储目录            |
+| `COMPACTION_THRESHOLD`     | int    | `5`     | 触发压缩的最小段数         |
+| `COMPACTION_INTERVAL_SECS` | int    | `60`    | 压缩检查间隔（秒）         |
+| `AUTH_TOKEN`               | string | `""`    | 全局认证 Token，空值禁用认证 |
+| `MAX_REQUEST_SIZE_MB`      | int    | `100`   | 请求体最大大小           |
 
 ## Docker Compose 示例
 
@@ -35,9 +35,9 @@ services:
 
 ## 服务器超时
 
-| 参数 | 值 |
-|------|-----|
-| ReadTimeout | 15s |
+| 参数           | 值   |
+|--------------|-----|
+| ReadTimeout  | 15s |
 | WriteTimeout | 15s |
-| IdleTimeout | 60s |
-| Shutdown 超时 | 15s |
+| IdleTimeout  | 60s |
+| Shutdown 超时  | 15s |

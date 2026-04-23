@@ -10,11 +10,11 @@ All APIs use a unified JSON response format:
 
 Three-tier auth model:
 
-| Tier | Mechanism | Endpoints |
-|------|-----------|-----------|
-| None | — | `GET /`, `GET /health` |
-| Global | `Authorization: Bearer <AUTH_TOKEN>` | Namespace CRUD + `/metrics` |
-| Namespace | `Authorization: Bearer <ns_token>` | All `/namespaces/{ns}/*` routes |
+| Tier      | Mechanism                            | Endpoints                       |
+|-----------|--------------------------------------|---------------------------------|
+| None      | —                                    | `GET /`, `GET /health`          |
+| Global    | `Authorization: Bearer <AUTH_TOKEN>` | Namespace CRUD + `/metrics`     |
+| Namespace | `Authorization: Bearer <ns_token>`   | All `/namespaces/{ns}/*` routes |
 
 ## CORS
 

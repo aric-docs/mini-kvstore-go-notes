@@ -4,11 +4,11 @@ All data lives in a single KVStore, logically isolated by key prefixes.
 
 ## Key Prefix Scheme
 
-| Type | Internal Key | Example |
-|------|-------------|---------|
-| Metadata | `_meta:ns:{name}` | `_meta:ns:my-app` |
-| KV/Blob | `ns:{ns}:{key}` | `ns:my-app:name` |
-| JSON | `ns:{ns}:json:{key}` | `ns:my-app:json:config` |
+| Type     | Internal Key         | Example                 |
+|----------|----------------------|-------------------------|
+| Metadata | `_meta:ns:{name}`    | `_meta:ns:my-app`       |
+| KV/Blob  | `ns:{ns}:{key}`      | `ns:my-app:name`        |
+| JSON     | `ns:{ns}:json:{key}` | `ns:my-app:json:config` |
 
 ## Mechanism
 

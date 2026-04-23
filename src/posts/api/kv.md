@@ -17,6 +17,7 @@ curl -X POST http://localhost:9002/namespaces/my-app/kv/name \
 ```
 
 响应 `201`:
+
 ```json
 {"data":{"key":"name","etag":"a1b2c3d4","size":5,"namespace":"my-app"},"status":201}
 ```
@@ -33,6 +34,7 @@ curl http://localhost:9002/namespaces/my-app/kv/name \
 ```
 
 响应 `200`:
+
 ```json
 {"data":"Alice","status":200}
 ```
@@ -62,6 +64,7 @@ curl http://localhost:9002/namespaces/my-app/kv \
 ```
 
 响应 `200`:
+
 ```json
 {"data":["name","email"],"status":200}
 ```
@@ -73,7 +76,7 @@ curl http://localhost:9002/namespaces/my-app/kv \
 
 ## 错误响应
 
-| 状态码 | 消息 | 场景 |
-|--------|------|------|
-| 404 | key not found | 键不存在 |
-| 400 | invalid key | 键名为空或以 `_meta:` 开头 |
+| 状态码 | 消息            | 场景                 |
+|-----|---------------|--------------------|
+| 404 | key not found | 键不存在               |
+| 400 | invalid key   | 键名为空或以 `_meta:` 开头 |

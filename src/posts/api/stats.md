@@ -11,6 +11,7 @@ curl http://localhost:9002/health
 ```
 
 响应 `200`:
+
 ```json
 {
   "data": {
@@ -37,6 +38,7 @@ curl http://localhost:9002/metrics \
 ```
 
 响应 `200`:
+
 ```json
 {
   "data": {
@@ -66,6 +68,7 @@ curl http://localhost:9002/namespaces/my-app/stats \
 ```
 
 响应 `200`:
+
 ```json
 {
   "data": {

@@ -23,11 +23,11 @@ docker run -d \
 docker-compose up -d
 ```
 
-| 节点 | 主机端口 | 容器端口 | Volume ID |
-|------|----------|----------|-----------|
-| volume-1 | 9001 | 9002 | vol-1 |
-| volume-2 | 9002 | 9002 | vol-2 |
-| volume-3 | 9003 | 9002 | vol-3 |
+| 节点       | 主机端口 | 容器端口 | Volume ID |
+|----------|------|------|-----------|
+| volume-1 | 9001 | 9002 | vol-1     |
+| volume-2 | 9002 | 9002 | vol-2     |
+| volume-3 | 9003 | 9002 | vol-3     |
 
 ```bash
 # 查看日志
@@ -48,11 +48,11 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
 
 ## Makefile 常用命令
 
-| 命令 | 说明 |
-|------|------|
-| `make build` | 编译 CLI + 服务器 |
-| `make server` | 编译并启动服务器 |
-| `make test` | 运行测试 |
-| `make docker` | 构建 Docker 镜像 |
+| 命令               | 说明                |
+|------------------|-------------------|
+| `make build`     | 编译 CLI + 服务器      |
+| `make server`    | 编译并启动服务器          |
+| `make test`      | 运行测试              |
+| `make docker`    | 构建 Docker 镜像      |
 | `make docker-up` | 启动 docker-compose |
-| `make clean` | 清理构建产物 |
+| `make clean`     | 清理构建产物            |

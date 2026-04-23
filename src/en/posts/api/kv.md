@@ -43,7 +43,7 @@ Response `200`: `{"data":["key1","key2"],"status":200}`
 
 ## Errors
 
-| Status | Message | When |
-|--------|---------|------|
-| 404 | key not found | Key doesn't exist |
-| 400 | invalid key | Empty key or `_meta:` prefix |
+| Status | Message       | When                         |
+|--------|---------------|------------------------------|
+| 404    | key not found | Key doesn't exist            |
+| 400    | invalid key   | Empty key or `_meta:` prefix |

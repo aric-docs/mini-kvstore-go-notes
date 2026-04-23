@@ -10,7 +10,8 @@ Protects: namespace CRUD, `/metrics`
 
 ## Namespace Auth
 
-Each namespace gets an auto-generated token (`ns_` + 16 hex chars). Middleware extracts `{ns}` from URL, looks up the namespace's token, and compares with the Bearer token.
+Each namespace gets an auto-generated token (`ns_` + 16 hex chars). Middleware extracts `{ns}` from URL, looks up the
+namespace's token, and compares with the Bearer token.
 
 Protects: all `/namespaces/{ns}/*` routes
 
