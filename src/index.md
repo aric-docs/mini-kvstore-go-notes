@@ -2,24 +2,33 @@
 layout: home
 
 hero:
-  name: 'KvStore'
-  text: 'A production-ready, segmented key-value storage engine written in Go'
+  name: 'Mini KV Store'
+  text: 'Go 编写的生产级分段键值存储引擎'
   actions:
     - theme: brand
-      text: 开始使用
-      link: /posts/standard/index.md
+      text: 快速开始
+      link: /posts/guide/getting-started.md
     - theme: alt
-      text: Github 主页
-      link: https://github.com/afeiship
+      text: API 文档
+      link: /posts/api/index.md
 
 features:
-  - icon: 🎣
-    title: React Hooks
-    details: 丰富的自定义 Hooks 集合，涵盖状态管理、副作用、DOM 操作等常见场景
-  - icon: 🛠️
-    title: 工具函数
-    details: 实用的 JavaScript 工具函数，包括字符串、对象、数组、时间等常用操作
-  - icon: 📚
-    title: 开发规范
-    details: 项目开发规范和最佳实践，包括 React 编码规范、Git 工作流、GitHub 协作规范等
+  - icon: 🗄️
+    title: 分段日志存储
+    details: 追加写入的分段式架构，16MB 自动轮转，CRC32 校验，fsync 保证持久化
+  - icon: ⚡
+    title: O(1) 快速读取
+    details: 内存 HashMap 索引 + Bloom Filter 加速查询，毫秒级响应
+  - icon: 🏢
+    title: 命名空间隔离
+    details: 多租户支持，每个命名空间独立 Token 认证，数据完全隔离
+  - icon: 📄
+    title: JSON 文档操作
+    details: 支持点路径操作（a.b.c），可对 JSON 文档的子字段进行增删改查
+  - icon: 🔒
+    title: 双层认证
+    details: 全局 Token + 每命名空间 Token，灵活的访问控制
+  - icon: 🐳
+    title: Docker 就绪
+    details: 多阶段构建镜像，docker-compose 三节点集群，开箱即用
 ---

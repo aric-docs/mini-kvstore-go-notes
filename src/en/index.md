@@ -2,24 +2,33 @@
 layout: home
 
 hero:
-  name: 'KvStore'
+  name: 'Mini KV Store'
   text: 'A production-ready, segmented key-value storage engine written in Go'
   actions:
     - theme: brand
       text: Get Started
-      link: /posts/standard/index.md
+      link: /en/posts/guide/getting-started.md
     - theme: alt
-      text: Github
-      link: https://github.com/afeiship
+      text: API Reference
+      link: /en/posts/api/index.md
 
 features:
-  - icon: 🎣
-    title: React Hooks
-    details: Rich collection of custom Hooks covering state management, side effects, DOM operations, and more
-  - icon: 🛠️
-    title: Utility Functions
-    details: Practical JavaScript utility functions for strings, objects, arrays, dates, and common operations
-  - icon: 📚
-    title: Development Standards
-    details: Project development standards and best practices, including React coding standards, Git workflows, and GitHub collaboration guidelines
+  - icon: 🗄️
+    title: Segmented Log Storage
+    details: Append-only segmented architecture with 16MB auto-rotation, CRC32 checksums, fsync durability
+  - icon: ⚡
+    title: O(1) Fast Reads
+    details: In-memory HashMap index + Bloom Filter for fast lookups with millisecond response times
+  - icon: 🏢
+    title: Namespace Isolation
+    details: Multi-tenant support with independent token auth per namespace and complete data isolation
+  - icon: 📄
+    title: JSON Document Operations
+    details: Dot-path operations (a.b.c) for getting, setting, and deleting nested JSON fields
+  - icon: 🔒
+    title: Two-Tier Auth
+    details: Global token + per-namespace token for flexible access control
+  - icon: 🐳
+    title: Docker Ready
+    details: Multi-stage build image, docker-compose 3-node cluster, health checks included
 ---

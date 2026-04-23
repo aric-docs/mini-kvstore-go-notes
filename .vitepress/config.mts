@@ -14,7 +14,7 @@ export default defineConfig({
   head: [
     ["link", { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" }],
   ],
-  title: "KvStore",
+  title: "Mini KV Store",
   description: "A production-ready, segmented key-value storage engine written in Go",
   outDir: "./dist",
   vite: {
@@ -41,10 +41,10 @@ export default defineConfig({
         },
         nav: [
           { text: "首页", link: "/" },
-          { text: "组件", link: "/posts/components/index.md" },
-          { text: "Utils", link: "/posts/utils/index.md" },
-          { text: "规范", link: "/posts/standard/index.md" },
-          { text: "事故", link: "/posts/incidents/index.md" },
+          { text: "指南", link: "/posts/guide/index.md" },
+          { text: "API", link: "/posts/api/index.md" },
+          { text: "架构", link: "/posts/architecture/index.md" },
+          { text: "部署", link: "/posts/deployment/index.md" },
         ],
         sidebar: generateSidebar({
           documentRootPath: "src",
@@ -78,7 +78,7 @@ export default defineConfig({
           },
         },
         socialLinks: [
-          { icon: "github", link: "https://github.com/afeiship" },
+          { icon: "github", link: "https://github.com/whispem/mini-kvstore-go" },
         ],
         footer: {
           message: "基于 MIT 许可发布",
@@ -106,10 +106,10 @@ export default defineConfig({
         },
         nav: [
           { text: "Home", link: "/en/" },
-          { text: "Components", link: "/en/posts/components/index.md" },
-          { text: "Utils", link: "/en/posts/utils/index.md" },
-          { text: "Standard", link: "/en/posts/standard/index.md" },
-          { text: "Incidents", link: "/en/posts/incidents/index.md" },
+          { text: "Guide", link: "/en/posts/guide/index.md" },
+          { text: "API", link: "/en/posts/api/index.md" },
+          { text: "Architecture", link: "/en/posts/architecture/index.md" },
+          { text: "Deployment", link: "/en/posts/deployment/index.md" },
         ],
         sidebar: generateSidebar({
           documentRootPath: "src/en",
@@ -143,7 +143,7 @@ export default defineConfig({
           },
         },
         socialLinks: [
-          { icon: "github", link: "https://github.com/GITHUB_USERNAME" },
+          { icon: "github", link: "https://github.com/whispem/mini-kvstore-go" },
         ],
         footer: {
           message: "Released under the MIT License.",
