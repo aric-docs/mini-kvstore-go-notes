@@ -19,7 +19,15 @@ curl -X POST http://localhost:9002/namespaces/my-app/kv/name \
 响应 `201`:
 
 ```json
-{"data":{"key":"name","etag":"a1b2c3d4","size":5,"namespace":"my-app"},"status":201}
+{
+  "data": {
+    "key": "name",
+    "etag": "a1b2c3d4",
+    "size": 5,
+    "namespace": "my-app"
+  },
+  "status": 201
+}
 ```
 
 ## 获取值
@@ -36,7 +44,10 @@ curl http://localhost:9002/namespaces/my-app/kv/name \
 响应 `200`:
 
 ```json
-{"data":"Alice","status":200}
+{
+  "data": "Alice",
+  "status": 200
+}
 ```
 
 ## 删除值
@@ -66,7 +77,13 @@ curl http://localhost:9002/namespaces/my-app/kv \
 响应 `200`:
 
 ```json
-{"data":["name","email"],"status":200}
+{
+  "data": [
+    "name",
+    "email"
+  ],
+  "status": 200
+}
 ```
 
 ## 键名规则

@@ -3,7 +3,10 @@
 所有 API 使用统一的 JSON 响应格式：
 
 ```json
-{"data": <结果>, "status": <HTTP状态码>}
+{
+  "data": <结果>,
+  "status": <HTTP状态码>
+}
 ```
 
 ## 认证

@@ -19,7 +19,15 @@ curl -X POST http://localhost:9002/namespaces/my-app/blobs/avatar.png \
 响应 `201`:
 
 ```json
-{"data":{"key":"avatar.png","etag":"e5f6g7h8","size":12345,"namespace":"my-app"},"status":201}
+{
+  "data": {
+    "key": "avatar.png",
+    "etag": "e5f6g7h8",
+    "size": 12345,
+    "namespace": "my-app"
+  },
+  "status": 201
+}
 ```
 
 ## 下载 Blob
